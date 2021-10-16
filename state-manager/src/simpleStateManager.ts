@@ -25,8 +25,7 @@ export const createStateHook = <DataType>(
         const [value, setValue] = useState<DataType>(initialValue);
 
         useEffect(() => {
-            subscribers.subscribe(setValue);
-            // return subscribers.subscribe(setValue);
+            return subscribers.subscribe(setValue);
         }, []);
 
         return [
