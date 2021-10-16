@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Subscribable_function_1 = require("./Subscribable-function");
+var sub = (0, Subscribable_function_1.createSubscribable)();
+var unsub = sub.subscribe(console.log);
+sub.publish('Hello1');
+sub.publish('Hello2');
+sub.publish('Hello3');
+sub.publish('Hello4');
+unsub();
+sub.publish("Doesn't log");
